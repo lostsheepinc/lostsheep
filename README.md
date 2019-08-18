@@ -9,6 +9,7 @@ Data is valuable, and missing data poses a significant risk to your business. Lo
   <button type="submit">Submit</button>
 </form>
 
+
 ## LostSheep in action:
 
 A drinks company carried out some market research with the hope of identifying peoples favourite spirit, ending up with the following dataset:
