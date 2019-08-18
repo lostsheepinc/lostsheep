@@ -31,3 +31,9 @@ The company now understand that the survey was not answered by people below the 
 
 This example is trivial as there are only a few columns, but with hundreds of columns and numerous complex dependencies in the data, LostSheep becomes incredibly useful.
 
+
+<form method="POST" action="https://formspree.io/lostsheepinc@gmail.com">
+  <input type="email" name="email" placeholder="Your email">
+  <textarea name="message" placeholder="Test Message"></textarea>
+  <button type="submit">Send Test</button>
+</form>
