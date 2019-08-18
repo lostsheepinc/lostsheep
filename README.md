@@ -8,7 +8,7 @@ Data is valuable, and missing data poses a significant risk to your business. Lo
   <input type="email" name="email" placeholder="Your email">
   <button type="submit">Submit</button>
 </form>
-
+<br>
 
 ## LostSheep in action:
 
