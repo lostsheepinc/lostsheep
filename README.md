@@ -21,7 +21,7 @@ Their survey results contain missing data, and they are keen to understand the r
 
 With LostSheep, this can be done in just a couple of lines:
 
-```
+```python
 >>> from lostsheep import LostSheep
 >>> LostSheep(data).explain('Favourite Spirit')
 ['Country = USA and Age < 21', 'Country = UK and Age < 18']
