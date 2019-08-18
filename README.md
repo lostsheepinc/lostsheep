@@ -1,37 +1,33 @@
-## Welcome to GitHub Pages
+## Welcome to LostSheep
 
-You can use the [editor on GitHub](https://github.com/lostsheepinc/lostsheep/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+Data is valuable, and missing data poses a significant risk to your business. LostSheep discovers and explains your data quality problems, helping you to resolve them faster than ever before.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## LostSheep in action:
 
-### Markdown
+A drinks company carried out some market research with the hope of identifying peoples favourite spirit, ending up with the following dataset:
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+`data = `
 
-```markdown
-Syntax highlighted code block
+Name|Age|Country|Favourite Spirit
+----|:---:|:---:|:----:
+Jack|43|USA|Whiskey
+John|14|UK|
+Jane|37|UK|Gin
+Jill|20|USA|
+Josh|19|UK|Vodka
+...|...|...|...
 
-# Header 1
-## Header 2
-### Header 3
+Their survey results contain missing data, and they are keen to understand the reasons behind this.
 
-- Bulleted
-- List
+With LostSheep, this can be done in just a couple of lines:
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```
+>>> from lostsheep import LostSheep
+>>> LostSheep(data).explain('Favourite Spirit')
+['Country = USA and Age < 21', 'Country = UK and Age < 18']
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+The company now understand that the survey was not answered by people below the legal drinking age in their country. 
 
-### Jekyll Themes
+This example is trivial as there are only a few columns, but with hundreds of columns and numerous complex dependencies in the data, LostSheep becomes incredibly useful.
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/lostsheepinc/lostsheep/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
